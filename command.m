@@ -1,0 +1,1 @@
+describe_matrix(visible_state_to_hidden_probabilities(test_rbm_w, data_1_case));
