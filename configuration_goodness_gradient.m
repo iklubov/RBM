@@ -8,3 +8,4 @@ function d_G_by_rbm_w = configuration_goodness_gradient(visible_state, hidden_st
 % (as opposed to the sum over data cases).
     d_G_by_rbm_w = visible_state*hidden_state'/size(visible_state,2);
 end
+

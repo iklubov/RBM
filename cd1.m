@@ -8,7 +8,8 @@ function ret = cd1(rbm_w, visible_data)
     visibleProb = hidden_state_to_visible_probabilities(rbm_w, hiddenState)
     visibleStateReconstr = sample_bernoulli(visibleProb)
     hiddenProbReconstr = visible_state_to_hidden_probabilities(rbm_w, visibleStateReconstr)
-    hiddenStateReconstr = sample_bernoulli(hiddenProbReconstr)
-    gradient2 = configuration_goodness_gradient(visibleStateReconstr, hiddenStateReconstr)
+    %hiddenStateReconstr = sample_bernoulli(hiddenProbReconstr)
+    %gradient2 = configuration_goodness_gradient(visibleStateReconstr, hiddenStateReconstr)
+    gradient2 = configuration_goodness_gradient_prob(visibleStateReconstr, hiddenProbReconstr)
     ret = gradient1 - gradient2
 end
